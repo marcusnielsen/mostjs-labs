@@ -1,5 +1,5 @@
 import { propagateEventTask, runEffects, tap } from "@most/core";
-import { currentTime, newDefaultScheduler } from "@most/scheduler";
+import { newDefaultScheduler } from "@most/scheduler";
 import { create, event } from "most-subject";
 
 // Create a new `Scheduler` for use in our application.
@@ -12,7 +12,7 @@ const scheduler = newDefaultScheduler();
 const [sink, stream] = create(tap<number>(console.log));
 
 // Pushes events into our stream.
-const next = (n: number) => event(currentTime(scheduler), n, sink);
+const next = (n: number) => sink.event(Number.MAX_SAFE_INTEGER, n);
 
 // Activate our stream.
 runEffects(stream, scheduler);
