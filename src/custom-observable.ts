@@ -36,7 +36,6 @@ const makeObservableTimer = (observer: any) => {
       state.value > 9000
         ? observer.error("It's above nine-thousand!")
         : observer.next(state),
-    // tslint:disable-next-line:trailing-comma
     onComponentDidUnmount: () => observer.complete()
   });
 
@@ -62,7 +61,6 @@ const unsub = makeObservableTimer({
   complete() {
     // tslint:disable-next-line:no-console
     console.log("done");
-    // tslint:disable-next-line:trailing-comma
   }
 });
 

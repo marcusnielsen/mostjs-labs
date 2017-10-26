@@ -27,6 +27,7 @@
   "dependencies": {
     "@most/core": "^0.15.0",
     "@most/dom-event": "^2.0.0",
+    "@typed/prelude": "^4.0.0",
     "dotenv": "^4.0.0",
     "most-subject": "^6.0.0",
     "rxjs": "^5.5.1"
@@ -36,6 +37,7 @@
     "nodemon": "^1.12.1",
     "prettier": "^1.7.4",
     "tslint": "^5.8.0",
+    "tslint-config-prettier": "^1.6.0",
     "typescript": "^2.5.3"
   }
 }
